@@ -65,7 +65,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "DATE: %s, ",           "%F %T" },
-	{ netspeed_rx, "NETDOWN: %s, ",        "wlp5s0" },
-	{ netspeed_tx, "NETUP: %s",        "wlp5s0" },
+	{ cpu_perc, "  %s%%|" },
+	{ ram_used, "  %s|" },
+	{ battery_perc, "🔋 %s%%|",        "BAT0" },
+	{ run_command, "🔈 %s%%|",           "pulsemixer --get-volume | sed 's/ .*//'" },
+	{ datetime, "🕒 %s",              "%F %T" },
 };
